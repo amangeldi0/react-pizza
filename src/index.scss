@@ -1,0 +1,103 @@
+@import url('http://fonts.cdnfonts.com/css/proxima-nova-2');
+*{
+  font-family: 'Proxima Nova', sans-serif;
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+//NAVBAR
+.navbar{
+  width: 85%;
+  margin: 0 auto;
+  @media (max-width: 650px) {
+    width: 95%;
+  }
+  .navbar__container{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 40px 0;
+    @media (max-width: 530px) {
+      padding: 25px 0;
+    }
+    .logo__block{
+      display: flex;
+      align-items: center;
+      gap: 10px;
+      .logo{
+        img{
+          width: 50px;
+          @media (max-width: 390px) {
+            width: 35px;
+          }
+        }
+      }
+      .title__block{
+        display: flex;
+        flex-direction: column;
+        gap: 2px;
+        .title{
+          font-weight: 800;
+          font-size: 24px;
+          @media (max-width: 530px) {
+            font-size: 20px;
+          }
+          @media (max-width: 390px) {
+            font-size: 18px;
+          }
+        }
+        .describe{
+          font-size: 16px;
+          color: #7B7B7B;
+          @media (max-width: 530px) {
+            font-size: 14px;
+          }
+          @media (max-width: 450px) {
+            font-size: 10px;
+          }
+        }
+      }
+    }
+    .cart__block{
+      width: 150px;
+      height: 50px;
+      background: #FE5F1E;
+      border-radius: 30px;
+      color: white;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 10px;
+      @media (max-width: 530px) {
+        gap: 7px;
+        width: 120px;
+        height: 40px;
+      }
+      hr{
+        width: 1px;
+        height: 25px;
+      }
+      .price{
+        @media (max-width: 530px) {
+          font-size: 14px;
+        }
+      }
+      .cart{
+        display: flex;
+        align-items: center;
+        gap: 5px;
+        img{
+          @media (max-width: 530px) {
+            width: 15px;
+          }
+        }
+        .cart__count{
+          @media (max-width: 530px) {
+            font-size: 14px;
+          }
+        }
+      }
+    }
+  }
+}

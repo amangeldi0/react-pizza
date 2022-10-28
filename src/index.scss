@@ -8,12 +8,13 @@
 
 //NAVBAR
 .navbar{
-  width: 85%;
-  margin: 0 auto;
-  @media (max-width: 650px) {
-    width: 95%;
-  }
+  border-bottom: 1px solid #f6f6f6;
   .navbar__container{
+    width: 85%;
+    margin: 0 auto;
+    @media (max-width: 650px) {
+      width: 95%;
+    }
     display: flex;
     align-items: center;
     justify-content: space-between;

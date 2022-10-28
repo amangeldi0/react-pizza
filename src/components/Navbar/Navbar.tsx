@@ -25,7 +25,6 @@ const Navbar: FC= () => {
                     </div>
                 </div>
             </div>
-            <hr style={{background: '#F7F7F7'}}/>
         </>
     );
 };

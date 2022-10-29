@@ -1,0 +1,37 @@
+.not__found{
+  display: flex;
+  height: 100vh;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  img{
+    width: 26%;
+    @media (max-width: 650px) {
+      width: 66%;
+    }
+  }
+  font-size: 32px;
+  font-weight: 500;
+  @media (max-width: 650px) {
+    font-size: 25px;
+  }
+  @media (max-width: 400px) {
+    font-size: 20px;
+  }
+  span{
+    font-weight: 700;
+  }
+  button{
+    width: 210px;
+    height: 46px;
+    font-weight: 700;
+    font-size: 16px;
+    line-height: 19px;
+    text-align: center;
+    letter-spacing: 0.015em;
+    color: #FFFFFF;
+    background: #282828;
+    border-radius: 30px;
+  }
+}

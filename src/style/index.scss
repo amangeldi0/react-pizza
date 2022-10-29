@@ -104,7 +104,7 @@
 }
 
 //SORT-BAR
-.sort__bar__container{
+.sort__bar__container {
   width: 85%;
   margin: 40px auto;
   display: flex;
@@ -113,18 +113,20 @@
   @media (max-width: 650px) {
     width: 95%;
   }
-  @media (max-width: 565px) {
+  @media (max-width: 880px) {
     flex-direction: column;
     gap: 10px;
   }
-  .button__sort{
+
+  .button__sort {
     display: flex;
     gap: 12px;
     @media (max-width: 440px) {
       flex-wrap: wrap;
       justify-content: center;
     }
-    .sort__type{
+
+    .sort__type {
       font-weight: 700;
       padding: 10px 25px;
       outline: none;
@@ -135,48 +137,45 @@
       line-height: 19px;
       letter-spacing: 0.015em;
       color: #2C2C2C;
-      &:hover{
+
+      &:hover {
         transition: all 0.7s;
         background-color: #2C2C2C;
         color: #F9F9F9;
       }
+
       @media (max-width: 750px) {
         padding: 5px 15px;
       }
     }
   }
-  .list__sort{
-    color: #2C2C2C;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 10px;
-    .list__title{
-      @media (max-width: 940px) {
-        display: none;
-      }
-      font-weight: 700;
-      font-size: 18px;
-      line-height: 17px;
-      letter-spacing: 0.015em;
+  .dropdown{
+    width: 220px;
+    .dropdown__btn{
+      border-radius: 25px;
+      background: #F9F9F9;
+      padding: 10px 30px;
       color: #2C2C2C;
-    }
-    select{
-      border: none;
-      appearance: none;
-      font-size: 16px;
-      height: 20px;
       text-align: center;
-      outline: none;
-      option{
-        cursor: pointer;
-        width: 300px;
-        min-height: 60px;
-        max-height: 300px;
-        border-radius: 15px;
-        background-color: rgb(250, 250, 250);
-        box-shadow: 2px 4px 8px #c5c5c5;
-        transition: all 300ms;
+      font-weight: 700;
+      @media (max-width: 750px) {
+        padding: 5px 15px;
+      }
+    }
+    .dropdown__content{
+      border-radius: 10px;
+      position: absolute;
+      top: 110%;
+      background: white;
+      color: #2C2C2C;
+      padding: 15px;
+      width: 100%;
+      .dropdown__item{
+        padding: 10px;
+        border-radius: 5px;
+        &:hover{
+          background: #f4f4f4;
+        }
       }
     }
   }

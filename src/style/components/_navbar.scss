@@ -52,43 +52,22 @@
       }
     }
     .cart__block{
-      width: 150px;
-      height: 50px;
+      width: 100px;
+      height: 40px;
       background: #FE5F1E;
       border-radius: 30px;
+      font-size: 18px;
+      gap: 10px;
       color: white;
       display: flex;
       align-items: center;
       justify-content: center;
-      gap: 10px;
-      @media (max-width: 530px) {
+      cursor: pointer;
+      @media (max-width: 450px) {
         gap: 7px;
-        width: 120px;
-        height: 40px;
-      }
-      hr{
-        width: 1px;
-        height: 25px;
-      }
-      .price{
-        @media (max-width: 530px) {
-          font-size: 14px;
-        }
-      }
-      .cart{
-        display: flex;
-        align-items: center;
-        gap: 5px;
-        img{
-          @media (max-width: 530px) {
-            width: 15px;
-          }
-        }
-        .cart__count{
-          @media (max-width: 530px) {
-            font-size: 14px;
-          }
-        }
+        font-size: 16px;
+        height: 32px;
+        width: 90px;
       }
     }
   }

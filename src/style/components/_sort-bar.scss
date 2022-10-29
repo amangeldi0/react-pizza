@@ -1,0 +1,74 @@
+.sort__bar__container {
+  width: 85%;
+  margin: 40px auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  @media (max-width: 650px) {
+    width: 95%;
+  }
+  @media (max-width: 880px) {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .button__sort {
+    display: flex;
+    gap: 12px;
+    @media (max-width: 440px) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+
+    .sort__type {
+      font-weight: 700;
+      padding: 10px 25px;
+      border: none;
+      border-radius: 30px;
+      background: #F9F9F9;
+      font-size: 16px;
+      line-height: 19px;
+      letter-spacing: 0.015em;
+      color: #2C2C2C;
+
+      &:hover {
+        transition: all 0.7s;
+        background-color: #2C2C2C;
+        color: #F9F9F9;
+      }
+
+      @media (max-width: 750px) {
+        padding: 5px 15px;
+      }
+    }
+  }
+  .dropdown{
+    width: 220px;
+    position: relative;
+    user-select: none;
+    .dropdown__btn{
+      padding: 10px 30px;
+      border-radius: 25px;
+      background: white;
+      color: #2C2C2C;
+      text-align: center;
+      font-weight: 700;
+      @media (max-width: 750px) {
+        padding: 5px 15px;
+      }
+    }
+    .dropdown__content{
+      position: absolute;
+      color: #2C2C2C;
+      padding: 15px;
+      width: 100%;
+      .dropdown__item{
+        padding: 10px;
+        border-radius: 5px;
+        &:hover{
+          background: #f4f4f4;
+        }
+      }
+    }
+  }
+}

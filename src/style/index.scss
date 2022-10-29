@@ -13,39 +13,4 @@
 //PIZZA-PAGE
 
 
-      @media (max-width: 750px) {
-        padding: 5px 15px;
-      }
-    }
-  }
-  .dropdown{
-    width: 220px;
-    position: relative;
-    user-select: none;
-    .dropdown__btn{
-      padding: 10px 30px;
-      border-radius: 25px;
-      background: white;
-      color: #2C2C2C;
-      text-align: center;
-      font-weight: 700;
-      @media (max-width: 750px) {
-        padding: 5px 15px;
-      }
-    }
-    .dropdown__content{
-      position: absolute;
-      color: #2C2C2C;
-      padding: 15px;
-      width: 100%;
-      .dropdown__item{
-        padding: 10px;
-        border-radius: 5px;
-        &:hover{
-          background: #f4f4f4;
-        }
-      }
-    }
-  }
-}
 

@@ -1,7 +1,7 @@
 import {FC, useState} from 'react';
 
-const types: string[] = ['all', 'grill', 'meat', 'chili', 'vegitarians']
-const typesS: string[] = ['по популярности', 'по цене', 'по алфавиту']
+const sortByCategories: string[] = ['Все', 'Класическая', 'Мясная', 'С овошями', 'Чили', "Супер", "Новинки"]
+const sortByDropDown: string[] = ['по популярности', 'по цене', 'по алфавиту']
 
 
 
@@ -12,7 +12,7 @@ const Sort: FC = () => {
         <div className='sort__bar__container'>
             <div className="button__sort">
                 {
-                    types.map(item => {
+                    sortByCategories.map(item => {
                         return (
                             <button className='sort__type'>{item}</button>
                         )
@@ -27,7 +27,7 @@ const Sort: FC = () => {
                 {
                     isActive && (
                         <div className="dropdown__content">
-                            {typesS.map(item => {
+                            {sortByDropDown.map(item => {
                                 return (
                                     <div
                                         key={item}

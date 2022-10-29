@@ -30,6 +30,7 @@ const Sort: FC = () => {
                             {typesS.map(item => {
                                 return (
                                     <div
+                                        key={item}
                                         className="dropdown__item"
                                         onClick={() => {
                                             setIsSelect(item)

@@ -11,6 +11,18 @@
 @import "./components/pizza-item";
 
 //PIZZA-PAGE
-
+.pizza__page{
+  .pizza__page__container{
+    width: 85%;
+    margin: 0 auto;
+    @media (max-width: 650px) {
+      width: 95%;
+    }
+    display: flex;
+    flex-wrap: wrap;
+    gap: 40px;
+    justify-content: center;
+  }
+}
 
 

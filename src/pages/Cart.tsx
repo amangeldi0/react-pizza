@@ -3,6 +3,8 @@ import trash from '../assets/trash.svg'
 import cart from '../assets/cart.svg'
 import close from '../assets/delete-item.svg'
 import example from '../assets/example.png'
+import {Link} from "react-router-dom";
+
 
 
 const Cart: FC = () => {
@@ -92,7 +94,7 @@ const Cart: FC = () => {
                     <div className="price">Сумма заказа: <span>900 ₽</span></div>
                 </div>
                 <div className="cart__buttons">
-                    <button className="back">Вернуться назад</button>
+                    <Link to={'/'} className="back">Вернуться назад</Link>
                     <div className="order">Оплатить сейчас</div>
                 </div>
             </div>

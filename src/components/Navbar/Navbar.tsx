@@ -1,8 +1,7 @@
 import {FC} from 'react';
-
+import {Link} from "react-router-dom";
 import logo from '../../assets/navabr-logo.svg'
 import cart from '../../assets/shoping-cart.svg'
-
 const Navbar: FC= () => {
     return (
         <>
@@ -15,14 +14,10 @@ const Navbar: FC= () => {
                             <div className="describe">самая вкусная пицца во вселенной</div>
                         </div>
                     </div>
-                    <div className="cart__block">
-                        <div className="price">520$</div>
-                        <hr/>
-                        <div className="cart">
-                            <img src={cart} alt="navbar__cart"/>
-                            <div className="cart__count">3</div>
-                        </div>
-                    </div>
+                    <Link to={'/cart'} className="cart__block">
+                        Cart
+                        <img src={cart} alt=""/>
+                    </Link>
                 </div>
             </div>
         </>

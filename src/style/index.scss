@@ -151,10 +151,12 @@
   }
   .dropdown{
     width: 220px;
+    position: relative;
+    user-select: none;
     .dropdown__btn{
-      border-radius: 25px;
-      background: #F9F9F9;
       padding: 10px 30px;
+      border-radius: 25px;
+      background: white;
       color: #2C2C2C;
       text-align: center;
       font-weight: 700;
@@ -163,10 +165,7 @@
       }
     }
     .dropdown__content{
-      border-radius: 10px;
       position: absolute;
-      top: 110%;
-      background: white;
       color: #2C2C2C;
       padding: 15px;
       width: 100%;

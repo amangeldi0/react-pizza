@@ -38,7 +38,7 @@ const PizzaItem:FC<PizzaItemProps> = ({props}) => {
                     </div>
                     <div className="size">
                         {
-                            props.size.map((item, i) => {
+                            props.size.map(item => {
                                 return <li
                                     key={item}
                                     className={activeSize == item ? 'active' : ''}

@@ -1,16 +1,19 @@
-import {FC, useEffect, useState} from 'react';
-import { IPizza } from "../types/types";
-import axios from "axios";
-import PizzaItem from "../components/PizzaItem/PizzaItem";
+import {FC, useEffect} from 'react';
+import {useAppDispatch} from "../redux/store";
+import {useSelector} from "react-redux";
+import {selectAll} from "../redux/data/selector";
+
 import Sort from "../components/Sort/Sort";
+import fetchPizza from "../redux/data/asyncActions";
 
 const Pizza: FC = () => {
     const dispatch = useAppDispatch()
     const pizza = useSelector(selectAll)
 
     useEffect(() => {
-        fetchPizza()
+        dispatch(fetchPizza())
     }, [])
+
     return (
        <>
            <Sort />

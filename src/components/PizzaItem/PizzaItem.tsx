@@ -1,4 +1,5 @@
 import {FC} from 'react';
+import {useState} from "react";
 
 interface PizzaItemProps {
     props: {
@@ -14,6 +15,10 @@ interface PizzaItemProps {
 }
 
 const PizzaItem:FC<PizzaItemProps> = ({props}) => {
+
+    const [activeType, setActiveType] = useState<string>('Традиционное');
+    const [activeSize, setActiveSize] = useState<string>('Маленькая');
+
     return (
         <div className='pizza__item'>
             <div className="pizza__container">
@@ -23,14 +28,22 @@ const PizzaItem:FC<PizzaItemProps> = ({props}) => {
                     <div className="type">
                         {
                             props.types.map(item => {
-                                return <li key={item}>{item}</li>
+                                return <li
+                                    key={item}
+                                    className={activeType == item ? 'active' : ''}
+                                    onClick={() => setActiveType(item)}
+                                >{item}</li>
                             })
                         }
                     </div>
                     <div className="size">
                         {
-                            props.size.map(item => {
-                                return <li key={item}>{item}</li>
+                            props.size.map((item, i) => {
+                                return <li
+                                    key={item}
+                                    className={activeSize == item ? 'active' : ''}
+                                    onClick={() => setActiveSize(item)}
+                                >{item}</li>
                             })
                         }
                     </div>

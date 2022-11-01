@@ -1,6 +1,7 @@
-import {createSlice, createEntityAdapter, PayloadAction, createSelector} from '@reduxjs/toolkit';
+import {createSlice, PayloadAction,} from '@reduxjs/toolkit';
 import fetchPizza from "./asyncActions";
 import {Pizza} from "./type";
+import {PizzaSliceState, Status} from "./type";
 
 const initialState: PizzaSliceState = {
     items: [],
@@ -25,16 +26,6 @@ const PizzaSlice = createSlice({
     }
 })
 
-
-
-
-
-
-
-
-
-
 const {actions, reducer} = PizzaSlice
-const {deletePizza, addPizza} = actions
 
 export default reducer;

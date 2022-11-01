@@ -1,13 +1,12 @@
-import {createSlice, createEntityAdapter, PayloadAction} from '@reduxjs/toolkit';
+import {createSlice, PayloadAction} from '@reduxjs/toolkit';
+import {FilterSliceTypes} from "./types";
 
-const filterAdapter = createEntityAdapter()
-
-const  initialState = filterAdapter.getInitialState({
+const  initialState: FilterSliceTypes = {
     activeFilter: '',
-    activeSort: 'All',
+    activeSort: 'все',
     activeSearch: ''
 
-})
+}
 
 const FilterSlice = createSlice({
     name: 'filter',
@@ -24,6 +23,8 @@ const FilterSlice = createSlice({
         }
     }
 })
+
+
 const {actions, reducer} = FilterSlice
 export const {activeFilterChanged, activeSortChanged, activeSearchChanged} = actions
 export default reducer;

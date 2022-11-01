@@ -19,3 +19,7 @@ export enum Status {
     SUCCESS = 'idle',
     ERROR = 'error',
 }
+
+export interface SearchPizzaParams  {
+    sort:string;
+};

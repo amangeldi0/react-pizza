@@ -1,8 +1,9 @@
-import {FC, useState} from 'react';
+import {FC, useState, useEffect} from 'react';
 import {useAppDispatch} from "../../redux/store";
-import {activeSortChanged} from "../../redux/filter/filterSlice";
+import {activeFilterChanged, activeSortChanged} from "../../redux/filter/filterSlice";
 import {activeSort} from "../../redux/filter/selectors";
 import {useSelector} from "react-redux";
+import fetchPizza from "../../redux/data/asyncActions";
 
 const sortByCategories: string[] = ['Все', 'Класическая', 'Мясная', 'С овошями', 'Чили', "Супер", "Новинка"]
 const sortByDropDown: string[] = ['по популярности', 'по цене', 'по алфавиту']

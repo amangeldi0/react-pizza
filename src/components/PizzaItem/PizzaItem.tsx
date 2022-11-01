@@ -19,6 +19,10 @@ const PizzaItem:FC<PizzaItemProps> = ({props}) => {
     const [activeType, setActiveType] = useState<string>('Традиционное');
     const [activeSize, setActiveSize] = useState<string>('Маленькая');
 
+    const onSubmit = (e: any) => {
+        e.preventDefault()
+    }
+
     return (
         <div className='pizza__item'>
             <div className="pizza__container">

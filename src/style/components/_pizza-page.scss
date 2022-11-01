@@ -10,9 +10,8 @@
     @media (max-width: 650px) {
       width: 95%;
     }
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
+    .not__pizzas{
+      margin-top: 50px;
+    }
   }
 }

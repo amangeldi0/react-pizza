@@ -1,7 +1,8 @@
 import { RootState } from '../store';
 import {createSelector} from "@reduxjs/toolkit";
 import {activeSearch, activeSort} from "../filter/selectors";
-export const pizzaDates = (state: RootState) => state.pizza.items
+const pizzaDates = (state: RootState) => state.pizza.items
+export const status = (state: RootState) => state.pizza.status
 export const filterPizza = createSelector(
     pizzaDates,
     activeSort,

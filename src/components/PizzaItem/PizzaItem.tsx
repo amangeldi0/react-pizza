@@ -24,7 +24,7 @@ const PizzaItem:FC<PizzaItemProps> = ({props}) => {
     }
 
     return (
-        <div className='pizza__item'>
+        <form className='pizza__item' onSubmit={(event) => onSubmit(event)}>
             <div className="pizza__container">
                 <div className="pizza__image"><img src={props.image} alt={`${props.title}`}/></div>
                 <div className="pizza__title">{props.title}</div>
@@ -54,15 +54,15 @@ const PizzaItem:FC<PizzaItemProps> = ({props}) => {
                 </div>
                 <div className="pizza__price__button">
                     <div className="price">oт {props.price}p</div>
-                    <div className="button">
+                    <button className="button" type="submit">
                         <div className="plus">+</div>
                         <div className="add">Добавить</div>
                         <div className="cart__count">2</div>
-                    </div>
+                    </button>
                 </div>
             </div>
 
-        </div>
+        </form>
     );
 };
 

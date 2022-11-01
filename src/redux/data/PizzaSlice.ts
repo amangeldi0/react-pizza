@@ -11,12 +11,7 @@ const PizzaSlice = createSlice({
     name: 'pizza',
     initialState,
     reducers : {
-        deletePizza(state, action:PayloadAction<string>) {
-            pizzaAdapter.removeOne(state, action.payload)
-        },
-        addPizza(state, action:PayloadAction<string>){
-            pizzaAdapter.addOne(state, action.payload)
-        }
+
     },
     extraReducers: (builder) => {
         builder

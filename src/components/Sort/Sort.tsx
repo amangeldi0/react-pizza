@@ -46,6 +46,7 @@ const Sort: FC = () => {
                                         onClick={() => {
                                             setIsSelect(item)
                                             setIsActive(false)
+                                            dispatch(activeFilterChanged(item))
                                         }}>{item}</div>
                                 )
                             })}

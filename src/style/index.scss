@@ -1,37 +1,21 @@
 //minimum styles
 @import "minimilize-style";
-
 //NAVBAR
 @import "./components/navbar";
-
 //SORT-BAR
 @import "./components/sort-bar";
-
 //PIZZA-ITEMS
 @import "./components/pizza-item";
-
 //PIZZA-PAGE
-.pizza__page{
-  margin-top: 80px;
-  .pizza__page__container{
-    width: 85%;
-    margin: 0 auto;
-    @media (max-width: 650px) {
-      width: 95%;
-    }
-    display: flex;
-    flex-wrap: wrap;
-    gap: 40px;
-    justify-content: center;
-  }
-}
-
+@import "./components/pizza-page";
 // CART-PAGE
 @import "./components/cart-page";
 // Empty card
 @import "./components/empty-cart";
 // NOT-FOUND
 @import "components/not-found";
+// SEARCH
+@import "components/search";
 
 
 

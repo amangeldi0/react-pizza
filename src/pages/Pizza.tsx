@@ -5,6 +5,8 @@ import {useSelector} from "react-redux";
 import Sort from "../components/Sort/Sort";
 import fetchPizza from "../redux/data/asyncActions";
 import {filterPizza} from "../redux/data/selector";
+import {Skeleton} from "../components/Skeleton/Skeleton";
+import {status} from "../redux/data/selector";
 
 const Pizza:FC = () => {
     const dispatch = useAppDispatch()

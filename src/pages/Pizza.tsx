@@ -1,17 +1,16 @@
 import {FC, useEffect} from 'react';
+import PizzaItem from "../components/PizzaItem/PizzaItem";
 import {useAppDispatch} from "../redux/store";
 import {useSelector} from "react-redux";
-import {selectAll} from "../redux/data/selector";
-
 import Sort from "../components/Sort/Sort";
 import fetchPizza from "../redux/data/asyncActions";
+import {filterPizza} from "../redux/data/selector";
 
-const Pizza: FC = () => {
+const Pizza:FC = () => {
     const dispatch = useAppDispatch()
-    const pizza = useSelector(selectAll)
-
+    const pizza = useSelector(filterPizza)
     useEffect(() => {
-        dispatch(fetchPizza())
+        dispatch(fetchPizza({sort: 'price'}))
     }, [])
 
     return (
@@ -19,7 +18,7 @@ const Pizza: FC = () => {
            <Sort />
            <div className="pizza__page">
                <div className="pizza__page__container">
-                   {data.map(item => {
+                   {pizza.map(item => {
                        return <PizzaItem key={item.id} props={item}/>
                    })}
                </div>

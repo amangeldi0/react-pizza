@@ -13,13 +13,13 @@ const Navbar: FC= () => {
         <>
             <div className="navbar">
                 <div className="navbar__container">
-                    <div className="logo__block">
+                    <Link to={'/'} className="logo__block">
                         <div className="logo"><img src={logo} alt="navbar__logo"/></div>
                         <div className="title__block">
                             <div className="title">REACT PIZZA</div>
                             <div className="describe">самая вкусная пицца во вселенной</div>
                         </div>
-                    </div>
+                    </Link>
                     <Search />
                     <div className='items__block'>
                         <div className='search__button'>

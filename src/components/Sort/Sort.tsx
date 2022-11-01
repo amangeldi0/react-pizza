@@ -15,6 +15,18 @@ const Sort: FC = () => {
     const activeSortButton = useSelector(activeSort)
     const dispatch = useAppDispatch()
 
+    const changeFilter = () => {
+      if (isSelect === 'по цене'){
+          dispatch(fetchPizza({sort: 'price'}))
+      }else if(isSelect === 'по алфавиту'){
+          dispatch(fetchPizza({sort: 'title'}))
+      }else if(isSelect === 'по популярности'){
+          dispatch(fetchPizza({sort: 'rate'}))
+      }
+    }
+    useEffect(() => {
+        changeFilter()
+    }, [isSelect])
     return (
         <div className='sort__bar__container'>
             <div className="button__sort">

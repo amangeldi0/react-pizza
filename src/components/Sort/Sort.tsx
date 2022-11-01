@@ -17,7 +17,13 @@ const Sort: FC = () => {
                 {
                     sortByCategories.map(item => {
                         return (
-                            <button className='sort__type' key={item} onClick={() => dispatch(activeSortChanged(item.replace(" ", "").toLowerCase()))}>{item}</button>
+                            <button
+                                className={activeSortButton === item.replace(" ", "").toLowerCase() ? 'sort__type__active' : 'sort__type'}
+                                key={item}
+                                onClick={() => dispatch(activeSortChanged(
+                                    item.replace(" ", "").toLowerCase()
+                                ))}
+                            >{item}</button>
                         )
                     })
                 }

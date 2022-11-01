@@ -1,6 +1,8 @@
 import {FC, useState} from 'react';
 import {useAppDispatch} from "../../redux/store";
 import {activeSortChanged} from "../../redux/filter/filterSlice";
+import {activeSort} from "../../redux/filter/selectors";
+import {useSelector} from "react-redux";
 
 const sortByCategories: string[] = ['Все', 'Класическая', 'Мясная', 'С овошями', 'Чили', "Супер", "Новинка"]
 const sortByDropDown: string[] = ['по популярности', 'по цене', 'по алфавиту']
@@ -9,6 +11,7 @@ const Sort: FC = () => {
     const [isActive, setIsActive] = useState<boolean>(false);
     const [isSelect, setIsSelect] = useState<string>('по поулярности')
 
+    const activeSortButton = useSelector(activeSort)
     const dispatch = useAppDispatch()
 
     return (

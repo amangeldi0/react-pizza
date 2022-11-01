@@ -16,14 +16,19 @@ const Pizza:FC = () => {
         dispatch(fetchPizza({sort: 'price'}))
     }, [])
 
+    const notFound = <h2 className='not__pizzas'>Таких пиц нету</h2>
+
+    const pizzas = pizza.map(item => {
+        return <PizzaItem key={item.id} props={item}/>
+    })
+    const skeletons = [...new Array(8)].map((_, index) => <Skeleton key={index} />);
+
     return (
        <>
            <Sort />
            <div className="pizza__page">
                <div className="pizza__page__container">
-                   {pizza.map(item => {
-                       return <PizzaItem key={item.id} props={item}/>
-                   })}
+                   {fetchStatus === 'loading' ? skeletons : pizzas.length === 0 ? notFound : pizzas}
                </div>
            </div>
        </>

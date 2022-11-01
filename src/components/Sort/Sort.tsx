@@ -1,20 +1,23 @@
 import {FC, useState} from 'react';
+import {useAppDispatch} from "../../redux/store";
+import {activeSortChanged} from "../../redux/filter/filterSlice";
 
-const sortByCategories: string[] = ['Все', 'Класическая', 'Мясная', 'С овошями', 'Чили', "Супер", "Новинки"]
+const sortByCategories: string[] = ['Все', 'Класическая', 'Мясная', 'С овошями', 'Чили', "Супер", "Новинка"]
 const sortByDropDown: string[] = ['по популярности', 'по цене', 'по алфавиту']
-
-
 
 const Sort: FC = () => {
     const [isActive, setIsActive] = useState<boolean>(false);
     const [isSelect, setIsSelect] = useState<string>('по поулярности')
+
+    const dispatch = useAppDispatch()
+
     return (
         <div className='sort__bar__container'>
             <div className="button__sort">
                 {
                     sortByCategories.map(item => {
                         return (
-                            <button className='sort__type'>{item}</button>
+                            <button className='sort__type' key={item} onClick={() => dispatch(activeSortChanged(item.replace(" ", "").toLowerCase()))}>{item}</button>
                         )
                     })
                 }
@@ -29,8 +32,7 @@ const Sort: FC = () => {
                         <div className="dropdown__content">
                             {sortByDropDown.map(item => {
                                 return (
-                                    <div
-                                        key={item}
+                                    <div key={item}
                                         className="dropdown__item"
                                         onClick={() => {
                                             setIsSelect(item)
@@ -41,7 +43,6 @@ const Sort: FC = () => {
                         </div>
                     )
                 }
-
             </div>
         </div>
     );

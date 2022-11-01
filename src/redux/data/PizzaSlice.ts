@@ -2,10 +2,11 @@ import {createSlice, createEntityAdapter, PayloadAction, createSelector} from '@
 import fetchPizza from "./asyncActions";
 import {Pizza} from "./type";
 
-export const pizzaAdapter = createEntityAdapter()
-const initialState = pizzaAdapter.getInitialState({
-    loadingStatus: 'idle'
-})
+const initialState: PizzaSliceState = {
+    items: [],
+    status: Status.LOADING
+}
+
 const PizzaSlice = createSlice({
     name: 'pizza',
     initialState,

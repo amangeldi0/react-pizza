@@ -2,7 +2,7 @@ import {createSlice, PayloadAction} from '@reduxjs/toolkit';
 import {FilterSliceTypes} from "./types";
 
 const  initialState: FilterSliceTypes = {
-    activeFilter: '',
+    activeFilter: 'по поулярности',
     activeSort: 'все',
     activeSearch: ''
 

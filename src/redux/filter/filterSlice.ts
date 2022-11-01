@@ -4,7 +4,8 @@ import {FilterSliceTypes} from "./types";
 const  initialState: FilterSliceTypes = {
     activeFilter: 'по поулярности',
     activeSort: 'все',
-    activeSearch: ''
+    activeSearch: '',
+    activeInput: false
 
 }
 
@@ -20,11 +21,14 @@ const FilterSlice = createSlice({
         },
         activeSearchChanged(state, action: PayloadAction<string>) {
             state.activeSearch = action.payload
+        },
+        activeInputChanged(state, action: PayloadAction<boolean>) {
+            state.activeInput = action.payload
         }
     }
 })
 
 
 const {actions, reducer} = FilterSlice
-export const {activeFilterChanged, activeSortChanged, activeSearchChanged} = actions
+export const {activeFilterChanged, activeSortChanged, activeSearchChanged, activeInputChanged} = actions
 export default reducer;

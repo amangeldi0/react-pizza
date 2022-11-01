@@ -121,17 +121,6 @@
       "rate": 4
     },
     {
-      "id": "22",
-      "title": "Гавайская",
-      "image": "https://cdn.dodostatic.net/static/Img/Products/7f300e9640544285ad377cd6ffcacc5e_292x292.jpeg",
-      "price": 445,
-      "size": ["Маленькая", "Средняя", "Большая"],
-      "types": ["Традиционное", "Тонкое"],
-      "category": ["класическая", "мясная"],
-      "rate": 5
-    }
-  ,
-    {
       "id": "13",
       "title": "Гавайская",
       "image": "https://cdn.dodostatic.net/static/Img/Products/7f300e9640544285ad377cd6ffcacc5e_292x292.jpeg",
@@ -221,6 +210,16 @@
       "types": ["Традиционное", "Тонкое"],
       "category": ["класическая", "чили"],
       "rate": 3
+    },
+    {
+      "id": "22",
+      "title": "Азиатская",
+      "image": "https://cdn.dodostatic.net/static/Img/Products/a5fbe87430b943b7833e632e94807355_584x584.jpeg",
+      "price": 415,
+      "size": ["Маленькая", "Средняя", "Большая"],
+      "types": ["Традиционное", "Тонкое"],
+      "category": ["чили", "мясная"],
+      "rate": 5
     }
   ]
 }

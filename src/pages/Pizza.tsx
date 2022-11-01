@@ -11,6 +11,7 @@ import {status} from "../redux/data/selector";
 const Pizza:FC = () => {
     const dispatch = useAppDispatch()
     const pizza = useSelector(filterPizza)
+    const fetchStatus = useSelector(status)
     useEffect(() => {
         dispatch(fetchPizza({sort: 'price'}))
     }, [])

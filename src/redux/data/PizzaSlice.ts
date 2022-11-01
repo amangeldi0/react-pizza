@@ -15,12 +15,12 @@ const PizzaSlice = createSlice({
     },
     extraReducers: (builder) => {
         builder
-            .addCase(fetchPizza.pending, state => {state.loadingStatus = 'loading'})
+            .addCase(fetchPizza.pending, state => {state.status = Status.LOADING})
             .addCase(fetchPizza.fulfilled, (state, action:PayloadAction<Pizza[]>) => {
-                pizzaAdapter.setAll(state, action.payload)
-                state.loadingStatus = 'idle';
+                state.items = action.payload
+                state.status = Status.SUCCESS
             })
-            .addCase(fetchPizza.rejected, state => {state.loadingStatus = 'error'})
+            .addCase(fetchPizza.rejected, state => {state.status = Status.ERROR})
             .addDefaultCase(() => {})
     }
 })

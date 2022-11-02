@@ -135,8 +135,8 @@ const Cart: FC = () => {
                     </div>
                 </div>
                 <div className="cart__count__price">
-                    <div className="count">Всего пицц: <span>3шт</span></div>
-                    <div className="price">Сумма заказа: <span>900 ₽</span></div>
+                    <div className="count">Всего пицц: <span>{totalCount}шт</span></div>
+                    <div className="price">Сумма заказа: <span>{calcTotalPrice(itemsFromCart)} ₽</span></div>
                 </div>
                 <div className="cart__buttons">
                     <Link to={'/'} className="back">Вернуться назад</Link>

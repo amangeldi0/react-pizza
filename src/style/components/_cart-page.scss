@@ -234,14 +234,14 @@
       font-size: 16px;
       line-height: 19px;
       text-align: center;
-      color: #FFFFFF;
-      background: #FE5F1E;
+      color: #FE5F1E;
+      background: transparent;
       display: flex;
       justify-content: center;
       align-items: center;
       &:hover{
-        background: transparent;
-        color: #FE5F1E;
+        background: #FE5F1E;
+        color: #FFFFFF;
       }
       @media (max-width: 510px){
         width: 150px;

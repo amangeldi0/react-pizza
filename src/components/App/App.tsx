@@ -11,9 +11,9 @@ const App: FC = () => {
             <BrowserRouter>
                 <Navbar />
                 <Routes>
-                    <Route path={'/'} element={<Pizza/>}/>
-                    <Route path={'/cart'} element={<Cart />}/>
-                    <Route path={'/*'} element={<NotFound />}/>
+                    <Route path={'/react-pizza/'} element={<Pizza/>}/>
+                    <Route path={'/react-pizza/cart'} element={<Cart />}/>
+                    <Route path={'/react-pizza/*'} element={<NotFound />}/>
                 </Routes>
             </BrowserRouter>
         </>

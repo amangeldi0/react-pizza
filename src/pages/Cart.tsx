@@ -110,7 +110,7 @@ const Cart: FC = () => {
                     <div className="price">Сумма заказа: <span>{calcTotalPrice(itemsFromCart)} ₽</span></div>
                 </div>
                 <div className="cart__buttons">
-                    <Link to={'/'} className="back">Вернуться назад</Link>
+                    <Link to={'/react-pizza/'} className="back">Вернуться назад</Link>
                     <div className="order">Оплатить сейчас</div>
                 </div>
             </div>

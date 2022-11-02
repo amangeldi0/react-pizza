@@ -7,7 +7,7 @@ const NotFound: FC = () => {
             <img src={notFound} alt=""/>
             Упс страница не найдена!!!
             <span>404</span>
-            <Link to={'/'} className='back'>
+            <Link to={'/react-pizza/'} className='back'>
                 Назад
             </Link>
         </div>

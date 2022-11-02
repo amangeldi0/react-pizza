@@ -18,7 +18,7 @@ const Navbar: FC= () => {
         <>
             <div className="navbar">
                 <div className="navbar__container">
-                    <Link to={'/'} className="logo__block">
+                    <Link to={'/react-pizza/'} className="logo__block">
                         <div className="logo"><img src={logo} alt="navbar__logo"/></div>
                         <div className="title__block">
                             <div className="title">REACT PIZZA</div>
@@ -33,7 +33,7 @@ const Navbar: FC= () => {
                                 alt="searchIcon"
                                 onClick={() => dispatch(activeInputChanged(true))}/>
                         </div>
-                        <Link to={'/cart'} className="cart__block">
+                        <Link to={'/react-pizza/cart'} className="cart__block">
                             Cart
                             <img src={cart} alt=""/>
                             <div className='pizza__count'>{totalCount}</div>

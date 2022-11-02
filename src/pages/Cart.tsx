@@ -6,7 +6,13 @@ import cart from '../assets/cart.svg'
 import close from '../assets/delete-item.svg'
 import { v4 as uuidv4 } from 'uuid';
 
-
+import {useAppDispatch} from "../redux/store";
+import {addItem, clearItems, minesItem, removeItem} from "../redux/cart/CartSlice";
+import {cartItems} from "../redux/cart/selectors";
+import {useSelector} from "react-redux";
+import {CartItem} from "../redux/cart/types";
+import { calcTotalPrice} from "../redux/cart/localstorage/calcTotalPrice";
+import EmptyCart from "../components/EmptyCart/EmptyCart";
 
 const Cart: FC = () => {
 

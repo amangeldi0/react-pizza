@@ -2,12 +2,13 @@ import {configureStore} from "@reduxjs/toolkit";
 import { useDispatch } from 'react-redux'
 import filter from './filter/filterSlice'
 import pizza from './data/PizzaSlice'
+import cart from './cart/CartSlice'
 
 const store = configureStore({
     reducer: {
         filter,
-        pizza
-
+        pizza,
+        cart
     },
     middleware: getDefaultMiddleware => getDefaultMiddleware(),
     devTools: process.env.NODE_ENV !== 'production',

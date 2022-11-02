@@ -60,7 +60,8 @@ const Cart: FC = () => {
                         <img src={cart} alt="cart"/>
                          Корзина
                     </div>
-                    <button className="clear__cart">
+                    <button className="clear__cart"
+                            onClick={() => dispatch(clearItems())}>
                         <img src={trash} alt="trash"/>
                         Очистить корзину
                     </button>

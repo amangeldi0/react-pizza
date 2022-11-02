@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-pizza/static/css/main.a956a553.css",
-    "main.js": "/react-pizza/static/js/main.c69a7c30.js",
+    "main.js": "/react-pizza/static/js/main.48cd7d04.js",
     "static/media/navabr-logo.svg": "/react-pizza/static/media/navabr-logo.cf6d3b6be905864076d6bda85444ef62.svg",
     "static/media/empty-cart.png": "/react-pizza/static/media/empty-cart.bd32f1b84ae88967ccbd.png",
     "static/media/notfound.svg": "/react-pizza/static/media/notfound.14d2524ec74616fdf0ec486017551497.svg",
@@ -14,10 +14,10 @@
     "static/media/search.svg": "/react-pizza/static/media/search.e550ace5ebf5affd08726d785f3003cc.svg",
     "index.html": "/react-pizza/index.html",
     "main.a956a553.css.map": "/react-pizza/static/css/main.a956a553.css.map",
-    "main.c69a7c30.js.map": "/react-pizza/static/js/main.c69a7c30.js.map"
+    "main.48cd7d04.js.map": "/react-pizza/static/js/main.48cd7d04.js.map"
   },
   "entrypoints": [
     "static/css/main.a956a553.css",
-    "static/js/main.c69a7c30.js"
+    "static/js/main.48cd7d04.js"
   ]
 }

@@ -9,7 +9,7 @@ const EmptyCart: FC = () => {
             <div className="title">Корзина пустая 😕</div>
             <div className="describe">Вероятней всего, вы не заказывали ещё пиццу. Для того, чтобы заказать пиццу, перейди на главную страницу.</div>
             <div className="image"><img src={empty} alt=""/></div>
-            <Link to={'/'} className="button">
+            <Link to={'/react-pizza/'} className="button">
                 <button>Вернуться назад</button>
             </Link>
         </div>

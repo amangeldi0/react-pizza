@@ -21,8 +21,20 @@ const PizzaItem:FC<PizzaItemProps> = ({props}) => {
     const [activeType, setActiveType] = useState<string>('Традиционное');
     const [activeSize, setActiveSize] = useState<string>('Маленькая');
 
+    const dispatch = useAppDispatch()
+
     const onSubmit = (e: any) => {
         e.preventDefault()
+        const cartItem: CartItem = {
+            id: props.id,
+            title: props.title,
+            price: props.price,
+            imageUrl: props.image,
+            type: activeType,
+            size: activeSize,
+            count: 0
+        }
+        dispatch(addItem(cartItem))
     }
 
     return (
@@ -59,7 +71,6 @@ const PizzaItem:FC<PizzaItemProps> = ({props}) => {
                     <button className="button" type="submit">
                         <div className="plus">+</div>
                         <div className="add">Добавить</div>
-                        <div className="cart__count">2</div>
                     </button>
                 </div>
             </div>

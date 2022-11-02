@@ -40,7 +40,7 @@ const PizzaItem:FC<PizzaItemProps> = ({props}) => {
     return (
         <form className='pizza__item' onSubmit={(event) => onSubmit(event)}>
             <div className="pizza__container">
-                <div className="pizza__image"><img src={props.image} alt={`${props.title}`}/></div>
+                <div className="pizza__image"><img src={props.image} loading='lazy' alt={`${props.title}`}/></div>
                 <div className="pizza__title">{props.title}</div>
                 <div className="pizza__types">
                     <div className="type">

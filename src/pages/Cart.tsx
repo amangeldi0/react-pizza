@@ -73,7 +73,7 @@ const Cart: FC = () => {
                             <div className="cart__item" key={uuidv4()}>
                                 <div className="item__header">
                                     <div className="item__image">
-                                        <img src={imageUrl} alt=""/>
+                                        <img src={imageUrl} alt="cart__pizza" loading='lazy'/>
                                     </div>
                                     <div className="item__title">
                                         <div className="title">{title}</div>

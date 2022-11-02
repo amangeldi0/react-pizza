@@ -4,8 +4,7 @@ import {Link} from "react-router-dom";
 import trash from '../assets/trash.svg'
 import cart from '../assets/cart.svg'
 import close from '../assets/delete-item.svg'
-import example from '../assets/example.png'
-import {Link} from "react-router-dom";
+import { v4 as uuidv4 } from 'uuid';
 
 
 

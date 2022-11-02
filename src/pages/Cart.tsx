@@ -1,4 +1,6 @@
-import {FC} from 'react';
+import {FC, useEffect} from 'react';
+import {Link} from "react-router-dom";
+
 import trash from '../assets/trash.svg'
 import cart from '../assets/cart.svg'
 import close from '../assets/delete-item.svg'

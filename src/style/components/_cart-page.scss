@@ -41,6 +41,7 @@
       line-height: 19px;
       color: #B6B6B6;
       border-radius: 5px;
+      cursor: pointer;
       @media (max-width: 450px) {
         padding: 6px 10px;
         font-size: 14px;
@@ -105,6 +106,7 @@
           align-items: center;
           gap: 10px;
           .counter__button{
+            cursor: pointer;
             width: 32px;
             height: 32px;
             border: 2px solid #FE5F1E;
@@ -133,7 +135,9 @@
           line-height: 27px;
         }
         .item__close{
-
+          &:hover{
+            cursor: pointer;
+          }
         }
       }
     }

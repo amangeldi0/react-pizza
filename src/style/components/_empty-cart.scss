@@ -45,11 +45,13 @@
       text-align: center;
       letter-spacing: 0.015em;
       color: #FFFFFF;
-
       width: 210px;
       height: 46px;
       background: #282828;
       border-radius: 30px;
+      &:hover{
+        cursor: pointer;
+      }
     }
   }
 }

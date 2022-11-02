@@ -44,6 +44,9 @@ h2 {
 a {
   text-decoration: none;
 }
+button{
+  cursor: pointer;
+}
 
 @mixin noselect {
   -webkit-touch-callout: none; /* iOS Safari */

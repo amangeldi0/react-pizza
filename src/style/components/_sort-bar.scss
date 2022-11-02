@@ -68,6 +68,7 @@
     width: 220px;
     position: relative;
     user-select: none;
+    z-index: 3;
     .dropdown__btn{
       padding: 10px 30px;
       border-radius: 25px;

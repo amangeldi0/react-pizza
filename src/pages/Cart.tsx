@@ -67,72 +67,43 @@ const Cart: FC = () => {
                     </button>
                 </div>
                 <div className="cart__items">
-                    <div className="cart__item">
-                        <div className="item__header">
-                            <div className="item__image">
-                                <img src={example} alt=""/>
+                    {itemsFromCart.map(item => {
+                        const {imageUrl, title, type, size, count, price} = item
+                        return (
+                            <div className="cart__item" key={uuidv4()}>
+                                <div className="item__header">
+                                    <div className="item__image">
+                                        <img src={imageUrl} alt=""/>
+                                    </div>
+                                    <div className="item__title">
+                                        <div className="title">{title}</div>
+                                        <div className="describe">{type} тесто, {size}.</div>
+                                    </div>
+                                </div>
+                                <div className="item__other">
+                                    <div className="item__counter">
+                                        <button
+                                            className="counter__button"
+                                            onClick={() => {
+                                                plus(item)
+                                            }}
+                                        >+</button>
+                                        <div className="count">{count}</div>
+                                        <button
+                                            className="counter__button"
+                                            onClick={() => {
+                                                mines(item)
+                                            }}
+                                        >-</button>
+                                    </div>
+                                    <div className="item__price">{count * price} ₽ </div>
+                                    <div className="item__close" onClick={() => dispatch(removeItem(item))}>
+                                        <img src={close} alt=""/>
+                                    </div>
+                                </div>
                             </div>
-                            <div className="item__title">
-                                <div className="title">Сырный цыпленок</div>
-                                <div className="describe">тонкое тесто, 26 см.</div>
-                            </div>
-                        </div>
-                        <div className="item__other">
-                            <div className="item__counter">
-                                <button className="counter__button">+</button>
-                                <div className="count">2</div>
-                                <button className="counter__button">-</button>
-                            </div>
-                            <div className="item__price">350 ₽ </div>
-                            <div className="item__close">
-                                <img src={close} alt=""/>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="cart__item">
-                        <div className="item__header">
-                            <div className="item__image">
-                                <img src={example} alt=""/>
-                            </div>
-                            <div className="item__title">
-                                <div className="title">Сырный цыпленок</div>
-                                <div className="describe">тонкое тесто, 26 см.</div>
-                            </div>
-                        </div>
-                        <div className="item__other">
-                            <div className="item__counter">
-                                <button className="counter__button">+</button>
-                                <div className="count">2</div>
-                                <button className="counter__button">-</button>
-                            </div>
-                            <div className="item__price">350 ₽ </div>
-                            <div className="item__close">
-                                <img src={close} alt=""/>
-                            </div>
-                        </div>
-                    </div>
-                    <div className="cart__item">
-                        <div className="item__header">
-                            <div className="item__image">
-                                <img src={example} alt=""/>
-                            </div>
-                            <div className="item__title">
-                                <div className="title">Сырный цыпленок</div>
-                                <div className="describe">тонкое тесто, 26 см.</div>
-                            </div>
-                        </div>
-                        <div className="item__other">
-                            <div className="item__counter">
-                                <button className="counter__button">+</button>
-                                <div className="count">2</div>
-                                <button className="counter__button">-</button>
-                            </div>
-                            <div className="item__price">350 ₽ </div>
-                            <div className="item__close">
-                                <img src={close} alt=""/>
-                            </div>
-                        </div>
-                    </div>
+                        )
+                    })}
                 </div>
                 <div className="cart__count__price">
                     <div className="count">Всего пицц: <span>{totalCount}шт</span></div>

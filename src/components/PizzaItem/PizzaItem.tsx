@@ -1,5 +1,7 @@
 import {FC, useState} from 'react';
-
+import {useAppDispatch} from "../../redux/store";
+import {addItem} from "../../redux/cart/CartSlice";
+import {CartItem} from "../../redux/cart/types";
 
 interface PizzaItemProps {
     props: {

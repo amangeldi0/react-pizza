@@ -10,7 +10,7 @@ const sortByDropDown: string[] = ['по популярности', 'по цен�
 
 const Sort: FC = () => {
     const [isActive, setIsActive] = useState<boolean>(false);
-    const [isSelect, setIsSelect] = useState<string>('по поулярности')
+    const [isSelect, setIsSelect] = useState<string>('по популярности')
 
     const activeSortButton = useSelector(activeSort)
     const dispatch = useAppDispatch()

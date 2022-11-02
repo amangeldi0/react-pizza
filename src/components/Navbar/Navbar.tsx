@@ -7,8 +7,13 @@ import searchIcon from "../../assets/search.svg";
 import {activeInputChanged} from '../../redux/filter/filterSlice'
 import Search from "../Search/Search";
 import {useAppDispatch} from "../../redux/store";
+import {useSelector} from "react-redux";
+import {cartItems} from "../../redux/cart/selectors";
 const Navbar: FC= () => {
     const dispatch = useAppDispatch()
+    const itemsFromCart = useSelector(cartItems)
+    const totalCount = itemsFromCart.reduce((sum: number, item: any) => sum + item.count, 0);
+
     return (
         <>
             <div className="navbar">
@@ -31,6 +36,7 @@ const Navbar: FC= () => {
                         <Link to={'/cart'} className="cart__block">
                             Cart
                             <img src={cart} alt=""/>
+                            <div className='pizza__count'>{totalCount}</div>
                         </Link>
                     </div>
                 </div>

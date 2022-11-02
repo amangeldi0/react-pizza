@@ -9,6 +9,43 @@ import { v4 as uuidv4 } from 'uuid';
 
 
 const Cart: FC = () => {
+
+    const dispatch = useAppDispatch()
+    const itemsFromCart = useSelector(cartItems)
+    const totalCount = itemsFromCart.reduce((sum: number, item: any) => sum + item.count, 0);
+    const totalPrice = calcTotalPrice(itemsFromCart)
+    useEffect(() => {
+        localStorage.setItem('cart', JSON.stringify(itemsFromCart))
+    }, [itemsFromCart])
+
+    const plus = (props: CartItem) => {
+        const cartItem: CartItem = {
+            id: props.id,
+            title: props.title,
+            price: props.price,
+            imageUrl: props.imageUrl,
+            type: props.type,
+            size: props.size,
+            count: props.count
+        }
+        dispatch(addItem(cartItem))
+    }
+    const mines = (props: CartItem) => {
+        const cartItem: CartItem = {
+            id: props.id,
+            title: props.title,
+            price: props.price,
+            imageUrl: props.imageUrl,
+            type: props.type,
+            size: props.size,
+            count: props.count
+        }
+        if (props.count > 1) {
+            dispatch(minesItem(cartItem))
+        }
+
+    }
+    if (totalPrice <= 0) return <EmptyCart />
     return (
         <>
             <div className="cart">

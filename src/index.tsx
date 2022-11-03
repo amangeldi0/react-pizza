@@ -1,6 +1,7 @@
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './style/index.scss'
+import 'antd-notifications-messages/lib/styles/style.css';
 import { Provider} from "react-redux";
 import App from "./components/App/App";
 import store from "./redux/store";

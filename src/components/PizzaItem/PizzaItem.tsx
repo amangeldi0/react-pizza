@@ -1,7 +1,18 @@
 import {FC, useState} from 'react';
-import {useAppDispatch} from "../../redux/store";
+import store, {useAppDispatch} from "../../redux/store";
 import {addItem} from "../../redux/cart/CartSlice";
 import {CartItem} from "../../redux/cart/types";
+import { notification } from 'antd-notifications-messages';
+
+const show = (type: any) => {
+    notification({
+        type,
+        title: 'React-Pizza',
+        message: `Пицца успешно добавлено в корзину`,
+        duration: 1500
+    });
+};
+
 
 interface PizzaItemProps {
     props: {
@@ -68,7 +79,7 @@ const PizzaItem:FC<PizzaItemProps> = ({props}) => {
                 </div>
                 <div className="pizza__price__button">
                     <div className="price">oт {props.price}p</div>
-                    <button className="button" type="submit">
+                    <button className="button" type="submit" onClick={() => show('success')}>
                         <div className="plus">+</div>
                         <div className="add">Добавить</div>
                     </button>

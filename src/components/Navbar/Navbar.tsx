@@ -34,7 +34,7 @@ const Navbar: FC= () => {
                                 onClick={() => dispatch(activeInputChanged(true))}/>
                         </div>
                         <Link to={'/react-pizza/cart'} className="cart__block">
-                            Cart
+                            <div className='title'>Cart</div>
                             <img src={cart} alt=""/>
                             <div className='pizza__count'>{totalCount}</div>
                         </Link>

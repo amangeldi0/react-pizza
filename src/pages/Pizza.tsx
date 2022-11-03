@@ -25,10 +25,11 @@ const Pizza:FC = () => {
 
     const notFound = <h2 className='not__pizzas'>Таких пиц нету</h2>
 
+    const skeletons = [...new Array(8)].map((_, index) => <Skeleton key={index} />);
+
     const pizzas = pizza.map(item => {
         return <PizzaItem key={item.id} props={item}/>
     })
-    const skeletons = [...new Array(8)].map((_, index) => <Skeleton key={index} />);
 
     return (
        <>

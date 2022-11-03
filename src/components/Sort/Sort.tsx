@@ -5,7 +5,7 @@ import {activeSort} from "../../redux/filter/selectors";
 import {useSelector} from "react-redux";
 import fetchPizza from "../../redux/data/asyncActions";
 
-const sortByCategories: string[] = ['Все', 'Класическая', 'Мясная', 'С овошями', 'Чили', "Супер", "Новинка"]
+const sortByCategories: string[] = ['Все', 'Класическая', 'Мясная', 'С овощями', 'Чили', "Супер", "Новинка"]
 const sortByDropDown: string[] = ['по популярности', 'по цене', 'по алфавиту']
 
 const Sort: FC = () => {

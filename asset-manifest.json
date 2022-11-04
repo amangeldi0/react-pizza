@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/react-pizza/static/css/main.51c68a0e.css",
-    "main.js": "/react-pizza/static/js/main.f9435820.js",
+    "main.js": "/react-pizza/static/js/main.b0849f3c.js",
     "static/media/navabr-logo.svg": "/react-pizza/static/media/navabr-logo.cf6d3b6be905864076d6bda85444ef62.svg",
     "static/media/empty-cart.png": "/react-pizza/static/media/empty-cart.bd32f1b84ae88967ccbd.png",
     "static/media/notfound.svg": "/react-pizza/static/media/notfound.14d2524ec74616fdf0ec486017551497.svg",
@@ -15,10 +15,10 @@
     "static/media/search.svg": "/react-pizza/static/media/search.e550ace5ebf5affd08726d785f3003cc.svg",
     "static/media/close_without_bg.svg": "/react-pizza/static/media/close_without_bg.2da585d096a862ff8dda9522c8df9610.svg",
     "main.51c68a0e.css.map": "/react-pizza/static/css/main.51c68a0e.css.map",
-    "main.f9435820.js.map": "/react-pizza/static/js/main.f9435820.js.map"
+    "main.b0849f3c.js.map": "/react-pizza/static/js/main.b0849f3c.js.map"
   },
   "entrypoints": [
     "static/css/main.51c68a0e.css",
-    "static/js/main.f9435820.js"
+    "static/js/main.b0849f3c.js"
   ]
 }

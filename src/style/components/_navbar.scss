@@ -98,7 +98,8 @@
         cursor: pointer;
         .pizza__count{
           position: absolute;
-          width: 20px;
+          min-width: 20px;
+          padding: 0 3px;
           height: 20px;
           color: #FE5F1E;
           display: flex;

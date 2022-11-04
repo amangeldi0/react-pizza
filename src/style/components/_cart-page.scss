@@ -54,24 +54,47 @@
     display: flex;
     flex-direction: column;
     gap: 30px;
+    @media (max-width: 700px) {
+      display: flex;
+      flex-direction: row;
+      justify-content: center;
+      align-items: center;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
     .cart__item{
       display: flex;
+      position: relative;
+      border-radius: 20px;
       align-items: center;
       justify-content: space-between;
       border-bottom: 1px solid #F4F4F4;
       padding-bottom: 30px;
-      @media (max-width: 570px) {
+      @media (max-width: 700px) {
+        box-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, 0.22);
         flex-direction: column;
         gap: 20px;
+        width: 260px;
       }
 
      .item__header{
        display: flex;
        gap: 15px;
        align-items: center;
+       @media (max-width: 700px) {
+         flex-direction: column;
+         align-items: center;
+         gap: 20px;
+       }
        .item__image{
          width: 80px;
          height: 80px;
+         @media (max-width: 700px) {
+           width: 200px;
+           height: 200px;
+           padding: 5px;
+           margin: 5px;
+         }
          img{
            width: 100%;
          }
@@ -84,6 +107,10 @@
            font-weight: 700;
            font-size: 22px;
            line-height: 27px;
+           @media (max-width: 700px) {
+             text-align: center;
+             font-size: 18px;
+           }
          }
          .describe{
            font-weight: 400;
@@ -91,12 +118,15 @@
            line-height: 22px;
            letter-spacing: 0.01em;
            color: #8D8D8D;
+           @media (max-width: 700px) {
+             font-size: 16px;
+           }
          }
        }
      }
       .item__other{
         display: flex;
-        gap: 100px;
+        gap: 40px;
         align-items: center;
         @media (max-width: 1234px) {
           gap: 20px;
@@ -104,7 +134,12 @@
         .item__counter{
           display: flex;
           align-items: center;
-          gap: 10px;
+          justify-content: space-between;
+          width: 100px;
+          @media (max-width: 700px) {
+            justify-content: center;
+            gap: 10px;
+          }
           .counter__button{
             cursor: pointer;
             width: 32px;
@@ -117,6 +152,10 @@
             justify-content: center;
             background: transparent;
             color: #EB5A1E;
+            @media (max-width: 700px) {
+              width: 26px;
+              height: 26px;
+            }
             &:hover{
               color: #FFFFFF;
               background: #FE5F1E;
@@ -127,14 +166,38 @@
             font-size: 22px;
             line-height: 27px;
             letter-spacing: 0.01em;
+            @media (max-width: 700px) {
+              font-size: 19px;
+            }
+
           }
         }
         .item__price{
+          text-align: center;
+          width: 90px;
           font-weight: 700;
           font-size: 22px;
           line-height: 27px;
+          @media (max-width: 700px) {
+            font-size: 19px;
+          }
         }
         .item__close{
+          .close__for__phone{
+            display: none;
+          }
+          @media (max-width: 700px) {
+            position: absolute;
+            top:  10px;
+            right: 10px;
+            .close__for__phone{
+              display: block;
+              width: 28px;
+            }
+            .close{
+              display: none;
+            }
+          }
           &:hover{
             cursor: pointer;
           }

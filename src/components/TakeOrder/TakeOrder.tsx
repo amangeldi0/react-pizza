@@ -4,12 +4,14 @@ import {useSelector} from "react-redux";
 import {clearItems} from "../../redux/cart/CartSlice";
 import { notification } from 'antd-notifications-messages';
 import {modalState, modalToFalse} from "../../redux/navbarState/NavbarSlice";
+import {useNavigate} from "react-router-dom";
 
 const TakeOrder: FC = () => {
     const [name, setName] = useState<string>('');
     const [number, setNumber] = useState<string>('');
     const [email, setEmail] = useState<string>('');
     const dispatch = useAppDispatch()
+    const navigate = useNavigate()
     const modal = useSelector(modalState)
     const show = (type: any) => {
         notification({
@@ -27,6 +29,7 @@ const TakeOrder: FC = () => {
         setNumber('')
         setEmail('')
         show('success')
+        navigate('/react-pizza/')
     }
     
     

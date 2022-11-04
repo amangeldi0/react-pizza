@@ -17,7 +17,7 @@ const TakeOrder: FC = () => {
         notification({
             type,
             title: 'React-Pizza',
-            message: `Ваш заказ умпешно принять`,
+            message: `Ваш заказ успешно принять`,
             duration: 3000
         });
     };

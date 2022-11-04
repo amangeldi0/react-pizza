@@ -1,10 +1,12 @@
 import {FC, useEffect} from 'react';
 import {Link} from "react-router-dom";
 
+import closeWithoutBg from '../assets/close_without_bg.svg'
 import trash from '../assets/trash.svg'
 import cart from '../assets/cart.svg'
 import close from '../assets/delete-item.svg'
 import { v4 as uuidv4 } from 'uuid';
+
 
 import {useAppDispatch} from "../redux/store";
 import {addItem, clearItems, minesItem, removeItem} from "../redux/cart/CartSlice";
@@ -13,6 +15,7 @@ import {useSelector} from "react-redux";
 import {CartItem} from "../redux/cart/types";
 import { calcTotalPrice} from "../redux/cart/localstorage/calcTotalPrice";
 import EmptyCart from "../components/EmptyCart/EmptyCart";
+import {toTrue} from "../redux/navbarState/NavbarSlice";
 
 const Cart: FC = () => {
 
@@ -34,7 +37,9 @@ const Cart: FC = () => {
             size: props.size,
             count: props.count
         }
-        dispatch(addItem(cartItem))
+        if (props.count < 20){
+            dispatch(addItem(cartItem))
+        }
     }
     const mines = (props: CartItem) => {
         const cartItem: CartItem = {
@@ -46,7 +51,7 @@ const Cart: FC = () => {
             size: props.size,
             count: props.count
         }
-        if (props.count > 1) {
+        if (props.count > 1 && props.count) {
             dispatch(minesItem(cartItem))
         }
 
@@ -98,7 +103,8 @@ const Cart: FC = () => {
                                     </div>
                                     <div className="item__price">{count * price} ₽ </div>
                                     <div className="item__close" onClick={() => dispatch(removeItem(item))}>
-                                        <img src={close} alt=""/>
+                                        <img src={close} alt="close" className='close'/>
+                                        <img src={closeWithoutBg} alt="close" className='close__for__phone'/>
                                     </div>
                                 </div>
                             </div>
@@ -110,7 +116,7 @@ const Cart: FC = () => {
                     <div className="price">Сумма заказа: <span>{calcTotalPrice(itemsFromCart)} ₽</span></div>
                 </div>
                 <div className="cart__buttons">
-                    <Link to={'/react-pizza/'} className="back">Вернуться назад</Link>
+                    <Link to={'/react-pizza/'} className="back" onClick={() => dispatch(toTrue())}>Вернуться назад</Link>
                     <div className="order">Оплатить сейчас</div>
                 </div>
             </div>

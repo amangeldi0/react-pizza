@@ -30,6 +30,7 @@ const TakeOrder: FC = () => {
         setEmail('')
         show('success')
         navigate('/react-pizza/')
+        dispatch(modalToFalse())
     }
     
     

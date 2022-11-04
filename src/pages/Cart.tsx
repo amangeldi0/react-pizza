@@ -15,7 +15,7 @@ import {useSelector} from "react-redux";
 import {CartItem} from "../redux/cart/types";
 import { calcTotalPrice} from "../redux/cart/localstorage/calcTotalPrice";
 import EmptyCart from "../components/EmptyCart/EmptyCart";
-import {toTrue} from "../redux/navbarState/NavbarSlice";
+import {modalToTrue, toTrue} from "../redux/navbarState/NavbarSlice";
 
 const Cart: FC = () => {
 
@@ -117,7 +117,7 @@ const Cart: FC = () => {
                 </div>
                 <div className="cart__buttons">
                     <Link to={'/react-pizza/'} className="back" onClick={() => dispatch(toTrue())}>Вернуться назад</Link>
-                    <div className="order">Оплатить сейчас</div>
+                    <div className="order" onClick={() => dispatch(modalToTrue())}>Оплатить сейчас</div>
                 </div>
             </div>
         </>
